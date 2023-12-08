@@ -43,16 +43,4 @@ public class AccessDB {
         }
     }
 
-    public void update(UpdateQuery updateQuery) {
-        String query = updateQuery.buildQuery();
-        System.out.println(query);
-        try{
-            ResultSet resultSet = QueryHelper.prepareStatement(connection, query, updateQuery.getConditionsValues());
-
-        } catch (SQLException e){
-            System.err.println(e.getMessage());
-        }
-    }
-
-
 }
